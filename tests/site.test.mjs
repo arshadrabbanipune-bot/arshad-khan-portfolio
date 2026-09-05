@@ -45,12 +45,16 @@ test("original character direction avoids named third-party character designs", 
 });
 
 test("follow developer control opens the supplied Instagram QR", async () => {
-  const [frame, follow] = await Promise.all([read("app/site-frame.tsx"), read("app/follow-developer.tsx")]);
+  const [frame, follow, styles] = await Promise.all([read("app/site-frame.tsx"), read("app/follow-developer.tsx"), read("app/globals.css")]);
   assert.match(frame, /<FollowDeveloper \/>/);
   assert.match(follow, /Follow developer/);
   assert.match(follow, /@ARSHAD19__X/);
   assert.match(follow, /instagram-qr-arshad19-x\.jpg/);
   assert.match(follow, /aria-modal="true"/);
+  assert.match(styles, /\.follow-backdrop[^}]*height:100dvh/);
+  assert.match(styles, /\.follow-backdrop[^}]*overflow-y:auto/);
+  assert.match(styles, /\.follow-qr[^}]*aspect-ratio:1/);
+  assert.match(styles, /\.follow-qr img[^}]*object-position:50% 34%/);
   await access(new URL("public/images/instagram-qr-arshad19-x.jpg", root));
 });
 
