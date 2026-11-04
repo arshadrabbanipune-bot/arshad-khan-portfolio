@@ -6,7 +6,7 @@ import { SiteFrame } from "./site-frame";
 export const metadata: Metadata = {
   title: "Designer & Product Builder",
   description:
-    "Portfolio of Arshad Khan — industrial designer, AI product builder, and creator of Imposter Arcade.",
+    "Portfolio of Arshad Khan — industrial designer and builder of Imposter Arcade, Northstar and Enhancer.io.",
 };
 
 const capabilities = [
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <div className="hero-stats" aria-label="Portfolio highlights">
               <div><strong>01</strong><span>Flagship game</span></div>
-              <div><strong>02</strong><span>Featured products</span></div>
+              <div><strong>03</strong><span>Featured products</span></div>
               <div><strong>100%</strong><span>Curiosity driven</span></div>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Home() {
         <section className="section shell" id="work">
           <div className="section-heading reveal">
             <div><p className="eyebrow">{"// FEATURED WORK"}</p><h2>Projects with a pulse.</h2></div>
-            <p>Two explorations of how thoughtful systems can change the way people gather, focus, and connect.</p>
+            <p>Three explorations of how thoughtful systems can change the way people play, focus, and create.</p>
           </div>
 
           <article className="flagship-card reveal tilt" data-achievement="Flagship project discovered">
@@ -95,6 +95,20 @@ export default function Home() {
                 <div className="ns-sidebar"><b /><b /><b /><b /></div>
                 <div className="ns-content"><p>Good morning, Arshad.</p><h4>What matters today?</h4><div className="ns-task active"><i /> Ship meaningful work <span>01</span></div><div className="ns-task"><i /> Reset and reflect <span>02</span></div><div className="ns-chart"><span /><span /><span /><span /><span /></div></div>
               </div>
+            </div>
+          </article>
+          <article className="enhancer-card" aria-labelledby="enhancer-project-title">
+            <div className="eh-card-image">
+              <span className="project-number">PROJECT_03</span>
+              <Link href="/enhancer-io" aria-label="Explore the Enhancer.io case study"><Image src="/images/enhancer-workspace.webp" alt="Enhancer.io Windows app with its image and wallpaper workspace" width={1600} height={1000} sizes="(max-width: 900px) 90vw, 55vw" /></Link>
+            </div>
+            <div className="project-copy">
+              <p className="eyebrow eh-purple">IMAGE WORKSPACE · WINDOWS V0.6.0</p>
+              <h3 id="enhancer-project-title">Enhancer.io</h3>
+              <p className="project-subtitle">Your images. More possibilities.</p>
+              <p>A local image and PDF workspace for enhancing photos, composing wallpapers, creating PDFs, compressing files and converting image formats. Designed to keep personal files on the user&apos;s device.</p>
+              <div className="tag-row"><span>Local GPU</span><span>Image enhancement</span><span>PDF tools</span><span>Format conversion</span></div>
+              <div className="button-row compact"><Link className="button eh-button magnetic" href="/enhancer-io">Explore Enhancer.io <span>↗</span></Link></div>
             </div>
           </article>
         </section>

@@ -5,13 +5,15 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 const read = (path) => readFile(new URL(path, root), "utf8");
 
-test("homepage preserves the portfolio and prioritizes the two featured projects", async () => {
+test("homepage preserves the portfolio and presents the three featured projects", async () => {
   const page = await read("app/page.tsx");
   assert.match(page, /Industrial Design/);
   assert.match(page, /NIT Rourkela/);
   assert.match(page, /Imposter Arcade/);
   assert.match(page, /Imposter Night/);
   assert.match(page, /Northstar/);
+  assert.match(page, /Enhancer.io/);
+  assert.match(page, /href="\/enhancer-io"/);
   assert.ok(page.indexOf("Imposter Arcade") < page.indexOf("Northstar"));
   assert.doesNotMatch(page, /Find the Imposter/);
 });
@@ -67,6 +69,8 @@ test("all local portfolio and downloadable game assets exist", async () => {
     "public/media/imposter-intro.mp4",
     "public/downloads/Imposter-Arcade-1.3-Final.zip",
     "public/og.png",
+    "public/images/enhancer-workspace.webp",
+    "public/images/enhancer-file-tools.webp",
   ];
   await Promise.all(paths.map((path) => access(new URL(path, root))));
   const zip = await stat(new URL("public/downloads/Imposter-Arcade-1.3-Final.zip", root));

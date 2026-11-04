@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./enhancer.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arshad-khan.com"),
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arshad Khan | Designer & Product Builder",
     description:
-      "Human-centered products, experimental technology, and Imposter Arcade — an offline LAN party game.",
+      "Human-centered products by Arshad Khan: Imposter Arcade, Northstar and Enhancer.io — a local image and PDF workspace.",
     images: [{ url: "/og.png", width: 1536, height: 1024 }],
     type: "website",
   },
