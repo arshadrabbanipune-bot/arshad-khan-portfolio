@@ -100,15 +100,15 @@ export default function Home() {
           <article className="enhancer-card" aria-labelledby="enhancer-project-title">
             <div className="eh-card-image">
               <span className="project-number">PROJECT_03</span>
-              <Link href="/enhancer-io" aria-label="Explore the Enhancer.io case study"><Image src="/images/enhancer-workspace.webp" alt="Enhancer.io Windows app with its image and wallpaper workspace" width={1600} height={1000} sizes="(max-width: 900px) 90vw, 55vw" /></Link>
+              <Link href="/enhancer-io" aria-label="Explore Enhancer.io for Windows"><Image src="/images/enhancer-workspace.webp" alt="Enhancer.io Windows app with its image and wallpaper workspace" width={1600} height={1000} sizes="(max-width: 900px) 90vw, 55vw" /></Link>
             </div>
             <div className="project-copy">
-              <p className="eyebrow eh-purple">IMAGE WORKSPACE · WINDOWS V0.6.0</p>
+              <p className="eyebrow eh-purple">IMAGE WORKSPACE · WINDOWS DESKTOP</p>
               <h3 id="enhancer-project-title">Enhancer.io</h3>
               <p className="project-subtitle">Your images. More possibilities.</p>
               <p>A local image and PDF workspace for enhancing photos, composing wallpapers, creating PDFs, compressing files and converting image formats. Designed to keep personal files on the user&apos;s device.</p>
               <div className="tag-row"><span>Local GPU</span><span>Image enhancement</span><span>PDF tools</span><span>Format conversion</span></div>
-              <div className="button-row compact"><Link className="button eh-button magnetic" href="/enhancer-io">Explore Enhancer.io <span>↗</span></Link></div>
+              <div className="button-row compact"><Link className="button eh-button magnetic" href="/enhancer-io">Explore &amp; download <span>↗</span></Link></div>
             </div>
           </article>
         </section>
